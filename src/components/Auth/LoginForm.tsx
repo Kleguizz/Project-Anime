@@ -34,19 +34,20 @@ const LoginForm: React.FC<LoginFormProps> = ({ onRegisterClick }) => {
   return (
     <Box
       sx={{
-        minHeight: '100vh',
-        width: '45vw',
+        minHeight: '85vh',
+        width: '50vw',
         display: 'flex',
         position: 'fixed',
         right: 0,
-        top: 0,
+        top: '50%',
+        transform: 'translateY(-50%)',
         background: 'transparent',
         overflow: 'hidden',
         alignItems: 'center',
         justifyContent: 'center',
       }}
     >
-      <Container maxWidth={false} sx={{ width: '100%', height: '100%', p: 4, background: 'transparent' }}>
+      <Container maxWidth={false} sx={{ width: '100%', height: '100%', p: 3, background: 'transparent' }}>
         <Box
           sx={{
             display: 'flex',

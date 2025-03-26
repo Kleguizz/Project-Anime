@@ -9,70 +9,70 @@ const animes = [
   { 
     id: 1, 
     title: 'Attack on Titan', 
-    image: 'https://cdn.myanimelist.net/images/anime/10/47347l.jpg', 
+    image: '/images/animes/attack-on-titan.jpg', 
     rating: 4.8,
     description: 'La humanidad vive rodeada por enormes muros que los protegen de los titanes. La historia sigue a Eren Yeager y sus amigos en su lucha por la supervivencia.'
   },
   { 
     id: 2, 
     title: 'Demon Slayer', 
-    image: 'https://cdn.myanimelist.net/images/anime/1286/99889l.jpg', 
+    image: '/images/animes/demon-slayer.jpg', 
     rating: 4.7,
     description: 'Tanjiro Kamado se convierte en un cazador de demonios después de que su familia es asesinada y su hermana transformada en demonio.'
   },
   { 
     id: 3, 
     title: 'Jujutsu Kaisen', 
-    image: 'https://cdn.myanimelist.net/images/anime/1171/109222l.jpg', 
+    image: '/images/animes/jujutsu-kaisen.jpg', 
     rating: 4.9,
     description: 'Yuji Itadori se une a una escuela de hechicería después de verse involucrado en un mundo de maldiciones y energía maldita.'
   },
   { 
     id: 4, 
-    title: 'One Punch Man', 
-    image: 'https://cdn.myanimelist.net/images/anime/12/76049l.jpg', 
-    rating: 4.6,
-    description: 'Saitama es un héroe que puede derrotar a cualquier enemigo con un solo golpe, pero busca un verdadero desafío en su vida monótona.'
+    title: 'Hunter x Hunter', 
+    image: '/images/animes/demon-slayer.jpg',
+    rating: 4.8,
+    description: 'Gon Freecss se embarca en una aventura para convertirse en un cazador profesional y encontrar a su padre, quien lo abandonó cuando era niño.'
   },
   { 
     id: 5, 
-    title: 'My Hero Academia', 
-    image: 'https://cdn.myanimelist.net/images/anime/10/78745l.jpg', 
-    rating: 4.5,
-    description: 'En un mundo donde el 80% de la población tiene superpoderes, Izuku Midoriya sueña con convertirse en un héroe a pesar de no tener ningún poder.'
+    title: 'Naruto', 
+    image: '/images/animes/steins-gate.jpg',
+    rating: 4.7,
+    description: 'Un joven ninja busca convertirse en el Hokage, el líder de su aldea, mientras lucha contra fuerzas oscuras que amenazan su mundo.'
   },
   { 
     id: 6, 
-    title: 'Death Note', 
-    image: 'https://cdn.myanimelist.net/images/anime/9/9453l.jpg', 
-    rating: 4.7,
-    description: 'Un estudiante encuentra un cuaderno sobrenatural que le permite matar a cualquier persona cuyo nombre escriba en él.'
+    title: 'Dragon Ball Z', 
+    image: '/images/animes/fullmetal-alchemist.jpg',
+    rating: 4.6,
+    description: 'Goku y sus amigos protegen la Tierra de poderosos enemigos mientras buscan las esferas del dragón para cumplir sus deseos.'
   },
   { 
     id: 7, 
     title: 'Fullmetal Alchemist', 
-    image: 'https://cdn.myanimelist.net/images/anime/1208/94745l.jpg', 
+    image: '/images/animes/fullmetal-alchemist.jpg', 
     rating: 4.8,
     description: 'Dos hermanos buscan la Piedra Filosofal para recuperar sus cuerpos después de un fallido intento de resucitar a su madre mediante alquimia.'
   },
   { 
     id: 8, 
     title: 'Steins;Gate', 
-    image: 'https://cdn.myanimelist.net/images/anime/5/73199l.jpg', 
+    image: '/images/animes/steins-gate.jpg', 
     rating: 4.8,
     description: 'Un autoproclamado científico loco descubre accidentalmente una forma de enviar mensajes al pasado, desencadenando una serie de eventos que alteran la realidad.'
   },
   { 
     id: 9, 
     title: 'Code Geass', 
-    image: 'https://cdn.myanimelist.net/images/anime/1032/106242l.jpg', 
+    image: '/images/animes/code-geass.jpg', 
     rating: 4.7,
     description: 'Un príncipe exiliado obtiene el poder de controlar las mentes de otros y lo usa para liderar una rebelión contra el Imperio Británico.'
   },
   { 
     id: 10, 
     title: 'Violet Evergarden', 
-    image: 'https://cdn.myanimelist.net/images/anime/1795/95088l.jpg', 
+    image: '/images/animes/violet-evergarden.jpg', 
     rating: 4.8,
     description: 'Una ex-soldado trabaja como escritora de cartas mientras aprende el significado del amor y las emociones humanas.'
   }
@@ -145,7 +145,10 @@ const AnimeCard: React.FC<{
               opacity: isLoaded ? 1 : 0,
               transform: isLoaded ? 'scale(1)' : 'scale(1.1)',
               transition: 'opacity 0.3s ease, transform 0.3s ease',
-              imageRendering: 'auto',
+              imageRendering: '-webkit-optimize-contrast',
+              WebkitBackfaceVisibility: 'hidden',
+              MozBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
             }}
             onLoad={() => setIsLoaded(true)}
             onError={handleImageError}

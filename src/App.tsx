@@ -1,51 +1,53 @@
 import React from 'react';
-import { Box, CssBaseline } from '@mui/material';
+import { Box } from '@mui/material';
 import AnimeCarousel from './components/Carousel/AnimeCarousel';
-import LoginForm from './components/Login/LoginForm';
-import VideoBackground from './components/VideoBackground/VideoBackground';
+import LoginForm from './components/Auth/LoginForm';
+import AnimatedBackground from './components/Background/AnimatedBackground';
 
 const App: React.FC = () => {
+  const handleRegisterClick = () => {
+    // Implementar lógica de registro
+  };
+
   return (
-    <>
-      <CssBaseline />
-      <VideoBackground />
+    <Box sx={{ 
+      width: '100%', 
+      height: '100vh',
+      position: 'relative',
+      overflow: 'hidden',
+      background: 'transparent',
+    }}>
+      <AnimatedBackground />
       <Box
         sx={{
           position: 'relative',
-          width: '100vw',
-          height: '100vh',
+          width: '100%',
+          height: '100%',
           display: 'flex',
-          overflow: 'hidden',
+          flexDirection: 'row',
+          zIndex: 1,
+          background: 'transparent',
         }}
       >
-        {/* Carrusel en la parte izquierda */}
-        <Box
-          sx={{
-            width: '60%',
-            height: '100%',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
+        <Box sx={{ 
+          width: '65%', 
+          height: '100%',
+          background: 'transparent',
+        }}>
           <AnimeCarousel />
         </Box>
-
-        {/* Login en la parte derecha */}
-        <Box
-          sx={{
-            width: '40%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative',
-            padding: '20px',
-          }}
-        >
-          <LoginForm />
+        <Box sx={{ 
+          width: '35%', 
+          height: '100%',
+          background: 'transparent',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <LoginForm onRegisterClick={handleRegisterClick} />
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

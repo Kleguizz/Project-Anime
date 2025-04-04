@@ -1,7 +1,4 @@
-
-
-
-https://github.com/user-attachments/assets/d48adcf3-5d1e-413b-a1a7-f959e7e1911a
+https://github.com/user-attachments/assets/96f7ae15-cbf9-493e-90d6-8e2b29ff80af
 
 
 ## Próximas Mejoras

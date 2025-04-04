@@ -1,4 +1,6 @@
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/8fd76163-b053-4e21-8b34-93aa2a8f389b)
+
+
 
 
 ## Próximas Mejoras
